@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+
+  <div class="container">
+    <img class="logo-auth" src="../../../assets/logo.png" alt="">
+    <h1 class="text-b">Bienvenido</h1>
+    <p class="text-sb">Comencemos...</p>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [formControl]="emailFormControl"
+               placeholder="Ex. pat@example.com">
+        <mat-hint>Ingresa tu correo, te llegara un codigo de verificacion!</mat-hint>
+        @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+          <mat-error>Agregar una direccion de correo Valida</mat-error>
+        }
+        @if (emailFormControl.hasError('required')) {
+          <mat-error>Email es <strong>Necesario</strong></mat-error>
+        }
+      </mat-form-field>
+    </form>
+  </div>
+</ion-content>
