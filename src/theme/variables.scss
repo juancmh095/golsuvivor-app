@@ -1,2 +1,10 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+:root{
+  --ion-color-primary: #03234d
+}
+
+*{
+  font-family: "Roboto Condensed", sans-serif;
+}

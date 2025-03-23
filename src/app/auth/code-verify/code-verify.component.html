@@ -1,3 +1,18 @@
-<p>
-  code-verify works!
-</p>
+<ion-content class="ion-padding">
+  <div style="padding: 10px; margin-top: 20%;">
+    <img class="logo-auth" src="../../../assets/banner.png" alt="">
+    <h1 class="text-b">Ingresa el codigo enviado a tu correo</h1>
+
+    <div class="verification-container">
+      <div class="code-inputs">
+        <input type="text" #codeInput maxlength="1" id="0" [(ngModel)]="code[0]" (keyup)="moveFocus($event, 0)" (focus)="code[0] = ''">
+        <input type="text" #codeInput maxlength="1" id="1" [(ngModel)]="code[1]" (keyup)="moveFocus($event, 1)" (focus)="code[1] = ''">
+        <input type="text" #codeInput maxlength="1" id="2" [(ngModel)]="code[2]" (keyup)="moveFocus($event, 2)" (focus)="code[2] = ''">
+        <input type="text" #codeInput maxlength="1" id="3" [(ngModel)]="code[3]" (keyup)="moveFocus($event, 3)" (focus)="code[3] = ''">
+        <input type="text" #codeInput maxlength="1" id="4" [(ngModel)]="code[4]" (keyup)="moveFocus($event, 4)" (focus)="code[4] = ''">
+      </div>
+    </div>
+    <ion-button fill="outline" shape="round" expand="block" (click)="verifyCode()">Verificar</ion-button>
+  </div>
+
+</ion-content>

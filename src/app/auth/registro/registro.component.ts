@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { IonContent, IonItem, IonInput, IonButton } from '@ionic/angular/standalone';;
 import {
   FormControl,
   FormGroupDirective,
@@ -10,15 +8,16 @@ import {
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule],
+  imports: [IonContent, FormsModule, ReactiveFormsModule, IonItem, IonInput, IonButton],
 })
 export class RegistroComponent  implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-
+  version:any = environment.version;
   constructor() { }
 
   ngOnInit() {}

@@ -15,7 +15,7 @@ export const routes: Routes = [
   },
   {
     path: 'player',
-    loadComponent: () => import('./player/player-home/player-home.component').then((m) => m.PlayerHomeComponent),
+    loadChildren: () => import('./player/player/player-routing.module').then((m) => m.PlayerRoutingModule),
   },
   {
     path: '',

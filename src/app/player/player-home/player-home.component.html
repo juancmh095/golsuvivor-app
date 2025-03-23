@@ -1,3 +1,67 @@
-<p>
-  player-home works!
-</p>
+<ion-content class="ion-padding">
+  <div class="titulo">
+    <h1 class="t1">Bienvenido</h1>
+    <h2 class="t2">Juan Mendez</h2>
+  </div>
+  <ion-searchbar search-icon="search-circle" show-clear-button="focus" mode="ios" value="Value"></ion-searchbar>
+  <div class="categorias">
+    <p class="st">Categorias</p>
+    <ion-segment value="all">
+      <ion-segment-button value="futbol">
+        <ion-icon size="large" name="football-outline"></ion-icon>
+        <ion-label>Futbol</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="basketball">
+        <ion-icon name="basketball-outline"></ion-icon>
+        <ion-label>Basketball</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="volleyball">
+        <ion-icon name="american-football-outline"></ion-icon>
+        <ion-label>Football</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="baseball">
+        <ion-icon name="baseball-outline"></ion-icon>
+        <ion-label>Beisbol</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="grupos">
+    <p class="st">Mis Grupos</p>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Grupo 1 - fulanos</ion-card-title>
+        <ion-card-subtitle>Liga mx</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-icon name="person-outline"></ion-icon> x5
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Grupo 1 - fulanos</ion-card-title>
+        <ion-card-subtitle>Liga mx</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-icon name="person-outline"></ion-icon> x5
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Grupo 1 - fulanos</ion-card-title>
+        <ion-card-subtitle>Liga mx</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-icon name="person-outline"></ion-icon> x5
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+  <div class="footer">
+    <ion-button style="margin-top: 15%;" expand="block">Crear Nuevo Grupo</ion-button>
+  </div>
+</ion-content>
