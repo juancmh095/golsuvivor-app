@@ -1,0 +1,17 @@
+ion-content{
+  --background: center/100vw 100vh url("../../../../assets/bg2.png") !important;
+  background-size: 10vw 10vh !important;
+}
+
+
+.title {
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 10px;
+  text-align: center;
+  color: #03234d;
+  height: 20vh;
+  background:  center/100% 100% url("../../../../assets/banner4.png") no-repeat;
+  padding: 10px;
+  align-items: center;
+}
