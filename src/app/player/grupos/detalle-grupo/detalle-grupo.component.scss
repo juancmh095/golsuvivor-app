@@ -1,0 +1,52 @@
+ion-content{
+  --background: center/100vw 100vh url("../../../../assets/bg2.png") !important;
+  background-size: 10vw 10vh !important;
+}
+
+
+.title {
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 10px;
+  text-align: center;
+  color: gray;
+  height: 20vh;
+  background:  center/100% 100% url("../../../../assets/banner2.png") no-repeat;
+  padding: 10px;
+  align-items: center;
+}
+
+.title-h2{
+  margin-top: 20%;
+  font-size: 1em;
+  font-weight: 900;
+  border: 1px solid gray;
+  background: #ffffffa1;
+  border-radius: 5px;
+  color: black;
+}
+
+.jornadas {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin: 10px;
+  width: 200px;
+}
+
+.jornada{
+  font-size: 1em;
+  color: #03234d
+}
+
+.jornadabtn{
+  color: #03234d;
+  background: #ffffff;
+  border-radius: 50px;
+  border: 1px solid gray;
+  margin-left: 10px;
+}

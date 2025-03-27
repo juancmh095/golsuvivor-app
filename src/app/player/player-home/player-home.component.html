@@ -7,7 +7,7 @@
   <div class="categorias">
     <p class="st">Categorias</p>
     <ion-segment value="all">
-      <ion-segment-button value="futbol">
+      <ion-segment-button value="futbol" routerLink="/player/categorias">
         <ion-icon size="large" name="football-outline"></ion-icon>
         <ion-label>Futbol</ion-label>
       </ion-segment-button>
@@ -28,7 +28,7 @@
 
   <div class="grupos">
     <p class="st">Mis Grupos</p>
-    <ion-card >
+    <ion-card routerLink="/player/grupo/detalle">
       <ion-card-header>
         <ion-card-title>Grupo 1 - fulanos</ion-card-title>
         <ion-card-subtitle>Liga mx</ion-card-subtitle>
@@ -62,6 +62,6 @@
 
   </div>
   <div class="footer">
-    <ion-button style="margin-top: 15%;" expand="block" >Crear Nuevo Grupo</ion-button>
+    <ion-button style="margin-top: 15%;" routerLink="/player/grupo/crear" expand="block" >Crear Nuevo Grupo</ion-button>
   </div>
 </ion-content>

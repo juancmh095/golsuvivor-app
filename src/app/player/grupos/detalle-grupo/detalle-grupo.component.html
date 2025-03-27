@@ -1,3 +1,95 @@
-<p>
-  detalle-grupo works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Nuevo Grupo</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="setOpen(true)"> <ion-icon name="list-outline"></ion-icon> </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4" size-lg="2">
+        <div class="title">
+          <h1 class="title-h2">Nombre del grupo</h1>
+        </div>
+      </ion-col>
+      <ion-col size="12">
+        <div class="jornadas">
+          <ion-segment [scrollable]="true" value="1">
+            <ion-segment-button class="jornadabtn" *ngFor="let item of jornadas" value="{{item}}">
+              <div class="jornada">
+                J{{item}}
+              </div>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <h2>Juegos</h2>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md="12" size-lg="12">
+        <p style="font-size: 13px; color:gray; font-style: italic;">da click sobre el equipo con el que deseas jugar esta jornada</p>
+        <ion-card>
+          <ion-card-content>
+            <ion-row>
+              <ion-col style="text-align: center;">
+                <img src="../../../../assets/icon.png" width="100" alt="">
+                <h1 style="text-align: center;">1</h1>
+              </ion-col>
+              <ion-col style="align-self:center; text-align: center;">
+                <h4 style="text-align: center; align-self:center;">VS</h4>
+                <h4>Fecha</h4>
+                <h4>Lugar</h4>
+              </ion-col>
+              <ion-col style="text-align: center;">
+                <img src="../../../../assets/icon.png" width="100" alt="">
+                <h1 style="text-align: center;">1</h1>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Tabla General</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen(false)">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list [inset]="true">
+        <ion-item [button]="true">
+          <ion-note slot="start">1.-</ion-note>
+          <ion-label>General</ion-label>
+          <ion-note slot="end">6</ion-note>
+        </ion-item>
+        <ion-item [button]="true">
+          <ion-note slot="start">2.-</ion-note>
+          <ion-label>Shopping</ion-label>
+          <ion-note slot="end">15</ion-note>
+        </ion-item>
+        <ion-item [button]="true">
+          <ion-note slot="start">1.-</ion-note>
+          <ion-label>Cleaning</ion-label>
+          <ion-note slot="end">3</ion-note>
+        </ion-item>
+        <ion-item [button]="true">
+          <ion-note slot="start">1.-</ion-note>
+          <ion-label>Reminders</ion-label>
+          <ion-note slot="end">8</ion-note>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-modal>
