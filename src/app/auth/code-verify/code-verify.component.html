@@ -12,7 +12,7 @@
         <input type="text" #codeInput maxlength="1" id="4" [(ngModel)]="code[4]" (keyup)="moveFocus($event, 4)" (focus)="code[4] = ''">
       </div>
     </div>
-    <ion-button fill="outline" shape="round" expand="block" (click)="verifyCode()">Verificar</ion-button>
+    <ion-button *ngIf="verify" fill="outline" shape="round" expand="block" (click)="sendCode()">Verificar</ion-button>
   </div>
 
 </ion-content>

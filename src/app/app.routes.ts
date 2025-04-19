@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { AuthGuard } from '../guard/auth.guard';
+import { VerifyGuard } from '../guard/verify.guard';
 
 export const routes: Routes = [
   {
@@ -8,6 +10,7 @@ export const routes: Routes = [
   {
     path: 'verify',
     loadComponent: () => import('./auth/code-verify/code-verify.component').then((m) => m.CodeVerifyComponent),
+    canActivate: [VerifyGuard]
   },
   {
     path: 'administrador',
@@ -16,6 +19,7 @@ export const routes: Routes = [
   {
     path: 'player',
     loadChildren: () => import('./player/player/player-routing.module').then((m) => m.PlayerRoutingModule),
+    canActivate: [AuthGuard]
   },
   {
     path: '',

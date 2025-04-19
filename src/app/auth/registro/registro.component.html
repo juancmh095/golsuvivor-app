@@ -18,9 +18,11 @@
           errorText="Correo No Valido"
           [clearInput]="true"
           email
+          name="email"
+          [(ngModel)]="email"
           placeholder="tucorreo@dominio.com"></ion-input>
       </ion-item>
-      <ion-button style="margin-top: 15%;" expand="block" shape="round" routerLink="/verify">Continuar</ion-button>
+      <ion-button style="margin-top: 15%;" expand="block" shape="round" (click)="login()">Continuar</ion-button>
     </form>
     <div class="footer">
       <p class="version">{{version}}</p>

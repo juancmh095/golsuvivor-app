@@ -9,6 +9,8 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { environment } from 'src/environments/environment';
+import { ApiService } from 'src/services/api.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -17,9 +19,28 @@ import { environment } from 'src/environments/environment';
 })
 export class RegistroComponent  implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  email:any;
   version:any = environment.version;
-  constructor() { }
+  constructor(
+    private _api:ApiService,
+    private router: Router
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    localStorage.clear();
+  }
+
+  async login() {
+    this._api.post('auth/login', {email: this.email}).subscribe(
+      (response) => {
+        console.log("🚀 ~ RegistroComponent ~ login ~ response:", response)
+        if(response.status){
+          localStorage.setItem('email', this.email);
+          this._api.utils.toastShow('bottom', 'Email enviado correctamente', 'success');
+          //enviar a pagina para verficiar codigo
+          this.router.navigate(['/verify']);
+        }
+      });
+  }
 
 }
